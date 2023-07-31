@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import Empty from "@/components/Empty";
 import Loader from "@/components/Loader";
+import { useProModal } from "@/hooks/use-pro-modal";
 
 type Props = {};
 
@@ -28,7 +29,7 @@ const VideoPage = (props: Props) => {
   });
 
   const isLoading = form.formState.isSubmitting;
-
+  const proModal = useProModal();
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     console.log(values);
     try {
@@ -39,8 +40,10 @@ const VideoPage = (props: Props) => {
       setVideo(response.data[0]);
 
       form.reset();
-    } catch (error) {
-      // TODO: Open Pro Model
+    } catch (error: any) {
+      if (error?.response?.status === 403) {
+        proModal.onOpen();
+      }
       console.log(error);
     } finally {
       router.refresh();
