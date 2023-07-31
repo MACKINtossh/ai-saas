@@ -50,7 +50,7 @@ const MusicPage = (props: Props) => {
   return (
     <div>
       <Heading
-        title="Music Generator"
+        title="Music Generation"
         description="Create music with a prompt."
         icon={Music}
         iconColor="text-emerald-500"
