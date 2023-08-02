@@ -25,7 +25,7 @@ const LandingNavbar = (props: Props) => {
           <Image fill alt="logo" src="/logo.png" />
         </div>
         <h1 className={cn("text-2xl font-bold text-white", font.className)}>
-          Genius
+          Raindrop
         </h1>
       </Link>
       <div className="flex items-center gap-x-2">

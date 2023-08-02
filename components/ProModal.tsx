@@ -44,7 +44,7 @@ const ProModal = (props: Props) => {
         <DialogHeader>
           <DialogTitle className="flex justify-center items-center flex-col gap-y-4 pb-2">
             <div className="flex items-center gap-x-2 font-bold py-1">
-              Upgrade to Genius Pro
+              Upgrade to Raindrop Pro
               <Badge className="uppercase text-sm py-1" variant="premium">
                 Pro
               </Badge>

@@ -9,7 +9,7 @@ const Loader = (props: Props) => {
       <div className="w-10 h-10 relative animate-spin">
         <Image src="/logo.png" alt="logo" fill />
       </div>
-      <p className="text-sm text-muted-foreground">Genius is thinking...</p>
+      <p className="text-sm text-muted-foreground">Raindrop is thinking...</p>
     </div>
   );
 };
