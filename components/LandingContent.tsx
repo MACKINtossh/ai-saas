@@ -21,6 +21,12 @@ const testimonials = [
     title: "Software Engineer",
     description: "WOW! I love it!",
   },
+  {
+    name: "Christian",
+    avatar: "C",
+    title: "Software Engineer",
+    description: "WOW! I love it!",
+  },
 ];
 
 type Props = {};
