@@ -22,10 +22,10 @@ const testimonials = [
     description: "WOW! I love it!",
   },
   {
-    name: "Christian",
-    avatar: "C",
+    name: "Alyssa",
+    avatar: "A",
     title: "Software Engineer",
-    description: "WOW! I love it!",
+    description: "This is awesome!",
   },
 ];
 
