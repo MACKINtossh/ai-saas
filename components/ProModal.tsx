@@ -1,5 +1,6 @@
 "use client";
 
+import { toast } from "react-hot-toast";
 import { useProModal } from "@/hooks/use-pro-modal";
 import {
   Dialog,
@@ -31,7 +32,7 @@ const ProModal = (props: Props) => {
 
       window.location.href = response.data.url;
     } catch (error) {
-      console.log(error, "STRIPE_CLIENT_ERROR");
+      toast.error("Someting went wrong.");
     } finally {
       setLoading(false);
     }
