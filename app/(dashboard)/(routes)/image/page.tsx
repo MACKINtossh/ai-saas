@@ -2,6 +2,7 @@
 
 import axios from "axios";
 import * as z from "zod";
+import { toast } from "react-hot-toast";
 import Heading from "@/components/Heading";
 import { DownloadIcon, ImageIcon, MessageSquare } from "lucide-react";
 import { useForm } from "react-hook-form";
@@ -33,7 +34,7 @@ type Props = {};
 const ImagePage = (props: Props) => {
   const router = useRouter();
   const [images, setImages] = useState<string[]>([]);
-  const proModal = useProModal()
+  const proModal = useProModal();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -60,6 +61,8 @@ const ImagePage = (props: Props) => {
     } catch (error: any) {
       if (error?.response?.status === 403) {
         proModal.onOpen();
+      } else {
+        toast.error("Something went wrong");
       }
       console.log(error);
     } finally {
